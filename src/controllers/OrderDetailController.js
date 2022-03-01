@@ -23,7 +23,7 @@ function createOrderDetail(req, res) {
             var productId = req.params.productId;
 
             // Gọi hàm OrderDetailModel .findOneAndUpdate
-            return OrderDetailModel.findOneAndUpdate({ _id: newOrderDetail._id }, {order: orderId}, {product: productId}, { new: true });
+            return OrderDetailModel.findOneAndUpdate({ _id: newOrderDetail._id }, {order: orderId, product: productId}, { new: true });
         })
         // Sau khi update customer thành công trả ra status 200 - Success
         .then((data) => {
