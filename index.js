@@ -4,6 +4,7 @@ const mongoose = require("mongoose"); // Tương ứng với import mongoose fro
 const app = express();
 
 const productRouter = require("./src/routes/ProductRouter");
+const customerRouter = require("./src/routes/CustomerRouter");
 
 // Khai báo body lấy tiếng Việt
 app.use(express.urlencoded({
@@ -31,6 +32,7 @@ app.get("/", (request, response) => {
 })
 
 app.use('/products', productRouter);
+app.use('/customers', customerRouter);
 
 
 app.listen(port, () => {
