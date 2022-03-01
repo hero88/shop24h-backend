@@ -1,0 +1,21 @@
+{
+  "name": "devcamp-backend-shop24h",
+  "version": "1.0.0",
+  "description": "Devcamp Backend Shop24h",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "debug": "nodemon --inspect index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://gitlab.com/devcamp120.j2110/longtgh/devcamp-backend-shop24h"
+  },
+  "author": "Longtgh",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.3",
+    "mongoose": "^6.2.3"
+  }
+}
