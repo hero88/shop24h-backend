@@ -5,6 +5,7 @@ const app = express();
 
 const productRouter = require("./src/routes/ProductRouter");
 const customerRouter = require("./src/routes/CustomerRouter");
+const orderRouter = require("./src/routes/OrderRouter");
 
 // Khai báo body lấy tiếng Việt
 app.use(express.urlencoded({
@@ -33,6 +34,7 @@ app.get("/", (request, response) => {
 
 app.use('/products', productRouter);
 app.use('/customers', customerRouter);
+app.use('/orders', orderRouter);
 
 
 app.listen(port, () => {
