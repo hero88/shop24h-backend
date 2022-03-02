@@ -3,6 +3,8 @@ const mongoose = require('mongoose');
 
 // Import Order Model
 const { OrderModel } = require('../models/OrderModel');
+// Import Customer Model
+const { CustomerModel } = require('../models/CustomerModel');
 
 // Create Order
 function createOrder(req, res) {
@@ -24,7 +26,11 @@ function createOrder(req, res) {
             var customerId = req.params.customerId;
 
             // Gọi hàm OrderModel .findOneAndUpdate
-            return OrderModel.findOneAndUpdate({ _id: newOrder._id }, {customer: customerId}, { new: true });
+            return OrderModel.findOneAndUpdate({ _id: newOrder._id }, {customer: customerId}, { new: true });                     
+        })
+        .then((newOrder)=>{
+            var customerId = req.params.customerId;
+            return CustomerModel.findOneAndUpdate({_id: customerId}, {$push: {orders: newOrder._id}}, {new: true});
         })
         // Sau khi update customer thành công trả ra status 200 - Success
         .then((data) => {
@@ -40,6 +46,33 @@ function createOrder(req, res) {
                 success: false,
                 message: 'Server error. Please try again.',
                 error: error.message,
+            });
+        });
+}
+
+// Get all order of customer 
+function getAllOrderOfCustomer(req, res) {
+    // Lấy customerId từ params URL (Khác với Query URL (sau ?))
+    const customerId = req.params.customerId;
+
+    // Gọi hàm .findById để tìm kiếm customer dựa vào ID
+    CustomerModel.findById(customerId)
+        // Lấy chi tiết Order dựa vào ánh xạ _id của từng phần tử trong trường orders
+        .populate({path: 'orders'})
+        // Nếu thành công trả ra status 200 - Success
+        .then((singleCustomer) => {
+            res.status(200).json({
+                success: true,
+                message: `More orders on ${singleCustomer.fullName}`,
+                Orders: singleCustomer
+            });
+        })
+        // Xử lý lỗi trả ra 500 - Server Internal Error
+        .catch((err) => {
+            res.status(500).json({
+                success: false,
+                message: 'This customer does not exist',
+                error: err.message,
             });
         });
 }
@@ -69,7 +102,7 @@ function getSingleOrder(req, res) {
     const id = req.params.orderId;
 
     OrderModel.findById(id)
-        .populate({path: 'customer'})
+        .populate({path: 'customer', select: "_id fullName phoneNumber email address city country"})
         .then((singleOrder) => {
             res.status(200).json({
                 success: true,
@@ -111,12 +144,14 @@ function deleteOrder(req, res) {
     const id = req.params.orderId;
 
     OrderModel.findByIdAndRemove(id)
+        .then(() => CustomerModel.updateMany({}, {$pull: {orders: id}}))
         .then(() => res.status(200).json({
             success: true,
         }))
         .catch((err) => res.status(500).json({
             success: false,
+            message: err.message,
         }));
 }
 
-module.exports = { createOrder, getAllOrder, updateOrderByID, getSingleOrder, deleteOrder }
+module.exports = { createOrder, getAllOrderOfCustomer, getAllOrder, updateOrderByID, getSingleOrder, deleteOrder }

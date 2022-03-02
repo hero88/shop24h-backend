@@ -13,6 +13,12 @@ const customerSchema = new Schema({
     address: String,
     city: String,
     country: String,
+    orders: [
+        {
+            type: Schema.Types.ObjectId,
+            ref: 'Order'
+        }
+    ],
     timeCreated: {
         type: Date,
         default: Date.now
