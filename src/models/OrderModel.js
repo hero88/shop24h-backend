@@ -28,8 +28,13 @@ const orderSchema = new Schema({
         {
             type: Schema.Types.ObjectId,
             ref: 'Customer'
+        },
+    details: [
+        {
+            type: Schema.Types.ObjectId,
+            ref: 'OrderDetail'
         }
-    
+    ]   
 
 })
 

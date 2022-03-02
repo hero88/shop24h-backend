@@ -2,9 +2,8 @@ const express = require("express");
 
 const router = express.Router();
 
-const { createOrderDetail, getAllOrderDetail, getSingleOrderDetail, updateOrderDetailByID, deleteOrderDetail } = require("../controllers/OrderDetailController");
+const {  getAllOrderDetail, getSingleOrderDetail, updateOrderDetailByID, deleteOrderDetail } = require("../controllers/OrderDetailController");
 
-router.post("/:orderId&:productId", createOrderDetail);
 router.get("/", getAllOrderDetail);
 
 router.get('/:orderdetailId', getSingleOrderDetail);

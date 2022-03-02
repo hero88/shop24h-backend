@@ -13,12 +13,15 @@ const orderdetailSchema = new Schema({
         {
             type: Schema.Types.ObjectId,
             ref: 'Order'
-        },
+        }
+    ,
     // Trường product là một ObjectID, liên kết tới product có _id tương ứng
-    product: {
-        type: Schema.Types.ObjectId,
-        ref: 'Product'
-    },
+    product: 
+        {
+            type: Schema.Types.ObjectId,
+            ref: 'Product'
+        }
+    ,
     quantity: Number,
     priceEach: Number
 })
