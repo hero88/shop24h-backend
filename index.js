@@ -2,12 +2,14 @@ const express = require("express"); // Tương ứng với import express from '
 const mongoose = require("mongoose"); // Tương ứng với import mongoose from 'mongoose'
 
 const app = express();
+const cors = require('cors');
 
 const productRouter = require("./src/routes/ProductRouter");
 const customerRouter = require("./src/routes/CustomerRouter");
 const orderRouter = require("./src/routes/OrderRouter");
 const orderDetailRouter = require('./src/routes/OrderDetailRouter');
 
+app.use(cors());
 // Khai báo body lấy tiếng Việt
 app.use(express.urlencoded({
     extended: true

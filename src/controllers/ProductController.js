@@ -29,7 +29,10 @@ function createProduct (request, response) {
 }
 
 function getAllProduct (request, response) {
+    let limitChoice = request.query.limit;
+    
     ProductModel.find()
+        .limit(limitChoice)
         .select("_id name type imageUrl buyPrice promotionPrice description timeCreated timeUpdated")
         .then((productList) => {
             return response.status(200).json({
