@@ -31,9 +31,8 @@ function createProduct (request, response) {
 function getAllProduct (request, response) {
     let limitChoice = request.query.limit;
     let skipChoice = request.query.skip;    
-    let searchPrice = request.query.price;    
-
-    ProductModel.find({buyPrice: {$gte: searchPrice}})
+    
+    ProductModel.find()
         .skip(skipChoice)
         .limit(limitChoice)
         .select("_id name type imageUrl buyPrice promotionPrice description timeCreated timeUpdated")
