@@ -9,7 +9,9 @@ const customerRouter = require("./src/routes/CustomerRouter");
 const orderRouter = require("./src/routes/OrderRouter");
 const orderDetailRouter = require('./src/routes/OrderDetailRouter');
 
+// khai báo CORS
 app.use(cors());
+
 // Khai báo body lấy tiếng Việt
 app.use(express.urlencoded({
     extended: true
