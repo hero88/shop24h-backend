@@ -35,6 +35,11 @@ function getAllProduct (request, response) {
     const endIndex = page * limitChoice;
     const total = ProductModel.countDocuments();
     const pagination = {};
+    
+    let name = request.query.name;
+    let minPrice = request.query.minPrice;
+    let maxPrice = request.query.maxPrice;
+    let type = request.query.type;
 
     ProductModel.find()
         .skip(startIndex)
@@ -54,12 +59,39 @@ function getAllProduct (request, response) {
                   page: page - 1,
                   limitChoice
                 };
+            }    
+
+            // doing filtering if exists
+            let filteredProduct = productList;
+            if (type !== "None" && type) { // filter by product type
+                filteredProduct = productList.filter(function (el){
+                    return el.type === type;
+                })
+            }
+            if (minPrice || maxPrice) { // filter by min,max price
+                if (isNaN(minPrice) || isNaN(maxPrice)) {
+                    alert("Phải nhập số !");
+                    return false;
+                }
+                else {
+                    filteredProduct = filteredProduct.filter(function(el){
+                        if (minPrice && maxPrice)
+                            return (el.buyPrice >= minPrice) && (el.buyPrice <= maxPrice);
+                        else
+                            return (el.buyPrice >= minPrice) || (el.buyPrice <= maxPrice); 
+                    })
+                }
+            }
+            if (name) { // filter by name
+                filteredProduct = filteredProduct.filter(function(el){
+                    return el.name.toLowerCase().indexOf(name.toLowerCase()) !== -1;
+                })
             }
             const advancedResults = {
                 success: true,
                 count: productList.length,
                 pagination,
-                products: productList
+                products: filteredProduct
             }
             return response.status(200).json(advancedResults);
         })
