@@ -29,18 +29,39 @@ function createProduct (request, response) {
 }
 
 function getAllProduct (request, response) {
-    let limitChoice = request.query.limit;
-    let skipChoice = request.query.skip;    
-    
+    const limitChoice = parseInt(request.query.limit, 10) || 25;
+    const page = parseInt(request.query.page, 10) || 1;
+    const startIndex = (page - 1) * limitChoice;   
+    const endIndex = page * limitChoice;
+    const total = ProductModel.countDocuments();
+    const pagination = {};
+
     ProductModel.find()
-        .skip(skipChoice)
+        .skip(startIndex)
         .limit(limitChoice)
         .select("_id name type imageUrl buyPrice promotionPrice description timeCreated timeUpdated")
         .then((productList) => {
-            return response.status(200).json({
-                message: "Success",
+            // If the endIndex is smaller than the total number of documents, we have a next page
+            if (endIndex < total) {
+                pagination.next = {
+                  page: page + 1,
+                  limitChoice
+                };
+            }
+            // If the startIndex is greater than 0, we have a previous page
+            if (startIndex > 0) {
+                pagination.prev = {
+                  page: page - 1,
+                  limitChoice
+                };
+            }
+            const advancedResults = {
+                success: true,
+                count: productList.length,
+                pagination,
                 products: productList
-            })
+            }
+            return response.status(200).json(advancedResults);
         })
         .catch((error) => {
             return response.status(500).json({
