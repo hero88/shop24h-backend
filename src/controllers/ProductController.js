@@ -37,12 +37,17 @@ function getAllProduct (request, response) {
     const pagination = {};
     
     let name = request.query.name;
-    let minPrice = request.query.minPrice;
-    let maxPrice = request.query.maxPrice;
+    let minPrice = parseInt(request.query.minPrice);
+    let maxPrice = parseInt(request.query.maxPrice);
     let type = request.query.type;
 
-    ProductModel.find()
-        .skip(startIndex)
+    let query = ProductModel.find();
+    if (name) query = query.find({name: name});
+    if (minPrice) query = query.find({buyPrice: {$gte: minPrice}});
+    if (maxPrice) query = query.find({buyPrice: {$lte: maxPrice}});
+    if (type) query = query.find({type: type});
+
+    query.skip(startIndex)
         .limit(limitChoice)
         .select("_id name type imageUrl buyPrice promotionPrice description timeCreated timeUpdated")
         .then((productList) => {
@@ -61,37 +66,11 @@ function getAllProduct (request, response) {
                 };
             }    
 
-            // doing filtering if exists
-            let filteredProduct = productList;
-            if (type !== "None" && type) { // filter by product type
-                filteredProduct = productList.filter(function (el){
-                    return el.type === type;
-                })
-            }
-            if (minPrice || maxPrice) { // filter by min,max price
-                if (isNaN(minPrice) || isNaN(maxPrice)) {
-                    alert("Phải nhập số !");
-                    return false;
-                }
-                else {
-                    filteredProduct = filteredProduct.filter(function(el){
-                        if (minPrice && maxPrice)
-                            return (el.buyPrice >= minPrice) && (el.buyPrice <= maxPrice);
-                        else
-                            return (el.buyPrice >= minPrice) || (el.buyPrice <= maxPrice); 
-                    })
-                }
-            }
-            if (name) { // filter by name
-                filteredProduct = filteredProduct.filter(function(el){
-                    return el.name.toLowerCase().indexOf(name.toLowerCase()) !== -1;
-                })
-            }
             const advancedResults = {
                 success: true,
                 count: productList.length,
                 pagination,
-                products: filteredProduct
+                products: productList
             }
             return response.status(200).json(advancedResults);
         })
