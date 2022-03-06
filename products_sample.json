@@ -1,0 +1,273 @@
+[{
+  "_id": {
+    "$oid": "621e1b550df7b5aafeeb99fb"
+  },
+  "name": "Balo Đi Học Thời Trang Nam Nữ Học Sinh Sinh Viên Đi Học Đi Làm Đi Du Lịch Đi Phượt Đẹp Giá Rẻ",
+  "type": "Balo",
+  "imageUrl": "https://cf.shopee.vn/file/3b5a888289319b7d4adaa29e968cc4cb",
+  "buyPrice": 69000,
+  "promotionPrice": 50000,
+  "description": "BALO được thiết kế bằng những đường may tỉ mỉ và chắc chắn, không chỉ mang đến độ bền mà còn mang đến tính thẩm mỹ, tinh tế cao. Phần dây đeo có thể điều chỉnh độ ngắn dài, được may bằng kỹ thuật gấp mép dây viền, thiết kế ôm rất sát hai vai, vững chắc, ko gây nhức mỏi vùng lưng và vai người sử dụng",
+  "timeCreated": {
+    "$date": "2022-03-01T13:10:45.862Z"
+  },
+  "timeUpdated": {
+    "$date": "2022-03-01T13:10:45.862Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "621e1b6e0df7b5aafeeb99fd"
+  },
+  "name": "Balo Nam Nữ thời trang thể thao năng động Hàn Quốc 2 khóa nắp gập đi chơi, du lịch và làm việc",
+  "type": "Balo",
+  "imageUrl": "https://cf.shopee.vn/file/a7c0aa3e70a946759241e4d09847809a",
+  "buyPrice": 120000,
+  "promotionPrice": 100000,
+  "description": "Kiểu dáng năng động, lịch sự và tiện ích với nhiều ngăn nhỏ đựng đồ thoải mái và phân loại vật dụng linh tinh cho ngăn nắp.\nKích thước: 45x35x18 cm.\nChất liệu: vải oxford cao cấp.\nĐựng vừa laptop 15.6 inch.\nMàu sắc: đen và xám là 2 màu trung tính dễ phối đồ và tham dự các loại sự kiện, đi làm, đi chơi, đi học , thể thao thoải mái.",
+  "timeCreated": {
+    "$date": "2022-03-01T13:11:10.668Z"
+  },
+  "timeUpdated": {
+    "$date": "2022-03-01T13:11:10.668Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "621e1bd90df7b5aafeeb99ff"
+  },
+  "name": "Màn Hình Ultrawide LG 34 inch LG 34UM56 Ultrawide 2k AH-IPS",
+  "type": "Display",
+  "imageUrl": "https://cf.shopee.vn/file/b07ebd7dc3dc4abb7ef90bc6287af488",
+  "buyPrice": 5490000,
+  "promotionPrice": 5000000,
+  "description": "Màn hình 2k LG 34um56 là dòng màn hình cao cấp chất lượng tuyệt đỉnh. Đem đến cho người sử dụng trải nghiệm đỉnh cao. Nó thích hợp cho nhiều mục đích sử dụng nhất là chơi game và thiết kế đồ họa.",
+  "timeCreated": {
+    "$date": "2022-03-01T13:12:57.995Z"
+  },
+  "timeUpdated": {
+    "$date": "2022-03-01T13:12:57.995Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6220b94147c025bf61dedc7a"
+  },
+  "name": "Cáp sạc iPhone USB-C to lightning",
+  "type": "Accessories",
+  "imageUrl": "https://maccare.vn/wp-content/uploads/2020/10/cap-sac-iphone-usb-c-to-lightning-1-met.jpg",
+  "buyPrice": 350000,
+  "promotionPrice": 280000,
+  "description": "Cáp sạc USB-C to Lightning giúp kết nối iPhone, iPad, iPod bằng đầu kết nối Lightning với máy Mac có hỗ trợ cổng USB-C hay Thunderbolt 3 (USB-C) để đồng bộ hoá và sạc, hoặc sạc iPad được hỗ trợ cổng USB-C",
+  "timeCreated": {
+    "$date": "2022-03-03T12:49:05.875Z"
+  },
+  "timeUpdated": {
+    "$date": "2022-03-03T12:49:05.875Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6220b9e347c025bf61dedc7c"
+  },
+  "name": "Balo Tomtoc Fashion Premium Waterproof Black",
+  "type": "Balo",
+  "imageUrl": "https://maccare.vn/wp-content/uploads/2020/09/balo-tomtoc-a61-e01d-black-2020.jpg",
+  "buyPrice": 1450000,
+  "promotionPrice": 1232500,
+  "description": "Balo Tomtoc Fashion Premium Waterproof Black sở hữu thiết kế trẻ trung, năng động nhưng không kém phần tinh tế và chất lượng. Sở hữu nhiều ưu điểm vượt trội, chiếc balo này hứa hẹn sẽ làm bất cứ ai đều muốn sở hữu. Ưu điểm đầu tiên phải kể đến là chất liệu chất lượng cao.",
+  "timeCreated": {
+    "$date": "2022-03-03T12:51:47.085Z"
+  },
+  "timeUpdated": {
+    "$date": "2022-03-03T12:51:47.085Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6220ba2d47c025bf61dedc7e"
+  },
+  "name": "Bàn phím Magic Keyboard Apple-US English",
+  "type": "Keyboard",
+  "imageUrl": "https://maccare.vn/wp-content/uploads/2020/12/magic-keyboard-2-us.jpg",
+  "buyPrice": 2700000,
+  "promotionPrice": 2430000,
+  "description": "Bàn phím Magic Keyboard 2 chính hãng Apple kết hợp kiểu dáng đẹp mắt với pin sạc tích hợp và các tính năng phím nâng cao. Với cơ chế cắt kéo bên dưới mỗi phím cũng như hành trình phím được tối ưu hoá và cấu hình thấp, Magic Keyboard mang đến trải nghiệm đánh máy chính xác và thoải mái.",
+  "timeCreated": {
+    "$date": "2022-03-03T12:53:01.450Z"
+  },
+  "timeUpdated": {
+    "$date": "2022-03-03T12:53:01.450Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6220baa147c025bf61dedc80"
+  },
+  "name": "Dụng cụ mở macbook, laptop đa năng",
+  "type": "Accesories",
+  "imageUrl": "https://maccare.vn/wp-content/uploads/2021/11/bo-tua-vit-mo-macbook-m1-2021.jpg",
+  "buyPrice": 250000,
+  "promotionPrice": 200000,
+  "description": "Bộ vít mở Macbook bao gồm 5 đầu vít, kèm theo 1 nhíp gắp, 2 thanh nạy, 1 cây cọ, khăn lau chuyên dụng. Bộ công cụ dùng để sửa này sẽ giúp bạn sửa chữa nhanh chóng và an toàn hơn, tiết kiệm thời gian và tiền bạc.",
+  "timeCreated": {
+    "$date": "2022-03-03T12:54:57.366Z"
+  },
+  "timeUpdated": {
+    "$date": "2022-03-03T12:54:57.366Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6220bade47c025bf61dedc82"
+  },
+  "name": "Miếng lót chuột 2 mặt bằng da PU",
+  "type": "Mouse",
+  "imageUrl": "https://maccare.vn/wp-content/uploads/2020/07/mieng-lot-chuot-da-pu-2-mat.jpg",
+  "buyPrice": 60000,
+  "promotionPrice": 54000,
+  "description": "Miếng lót chuột giúp tạo ra một bề mặt tiếp xúc phù hợp, giúp người dụng trải nghiệm chuột tốt hơn và đã hơn.",
+  "timeCreated": {
+    "$date": "2022-03-03T12:55:58.974Z"
+  },
+  "timeUpdated": {
+    "$date": "2022-03-03T12:55:58.974Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6220bb1d47c025bf61dedc84"
+  },
+  "name": "Dây cáp sạc Apple Watch Magnetic Charger 1m",
+  "type": "Accessories",
+  "imageUrl": "https://maccare.vn/wp-content/uploads/2020/12/cap-sac-apple-watch-magnetic-charger-1m.jpg",
+  "buyPrice": 550000,
+  "promotionPrice": 440000,
+  "description": "Sợi dây cáp sạc Apple Watch chính hãng Apple dài 1 mét đi kèm khi mua Apple Watch. Sản phẩm khiến việc sạc Apple Watch trở nên hoàn toàn dễ dàng.",
+  "timeCreated": {
+    "$date": "2022-03-03T12:57:01.781Z"
+  },
+  "timeUpdated": {
+    "$date": "2022-03-03T12:57:01.781Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6220bb6947c025bf61dedc86"
+  },
+  "name": "Cáp màn hình Macbook Air",
+  "type": "Display",
+  "imageUrl": "https://maccare.vn/wp-content/uploads/2017/11/cap-man-hinh-macbook-air.jpg",
+  "buyPrice": 380000,
+  "promotionPrice": 304000,
+  "description": "Cáp màn hình Macbook Air giống y như sợi cáp cũ trên máy Macbook của bạn. Hoàn toàn phù hợp với máy Mac của bạn.",
+  "timeCreated": {
+    "$date": "2022-03-03T12:58:17.557Z"
+  },
+  "timeUpdated": {
+    "$date": "2022-03-03T12:58:17.557Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6220bbb047c025bf61dedc88"
+  },
+  "name": "Bộ chân đế cao su Macbook Pro kèm nút nhựa",
+  "type": "Accesories",
+  "imageUrl": "https://maccare.vn/wp-content/uploads/2017/07/bo-chan-de-macbook-pro-day-du.jpg",
+  "buyPrice": 200000,
+  "promotionPrice": 180000,
+  "description": "Bộ chân đế cao su Macbook Pro kèm nút nhựa bên trong. Đây là bộ chân đế cao su đầy đủ nhất dành cho dòng Macbook Pro.",
+  "timeCreated": {
+    "$date": "2022-03-03T12:59:28.894Z"
+  },
+  "timeUpdated": {
+    "$date": "2022-03-03T12:59:28.894Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6220bbfc47c025bf61dedc8a"
+  },
+  "name": "Phủ phím macbook màu cam san hô kèm phím tắt MacOS",
+  "type": "Keyboard",
+  "imageUrl": "https://maccare.vn/wp-content/uploads/2021/02/phu-phim-macbook-2021-mau-cam-san-ho.jpg",
+  "buyPrice": 230000,
+  "promotionPrice": 200000,
+  "description": "Phủ phím JRC nhanh chóng chiếm thiện cảm của người dùng với thiết kế thông minh, tiện dụng. Các tổ hợp phím tắt đều được sắp xếp và in rõ ràng, sắc nét, dễ nhìn trên bề mặt miếng lót.",
+  "timeCreated": {
+    "$date": "2022-03-03T13:00:44.995Z"
+  },
+  "timeUpdated": {
+    "$date": "2022-03-03T13:00:44.995Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6220bc3b47c025bf61dedc8c"
+  },
+  "name": "Bộ vệ sinh JCPAL MiX Screen Cleaner Set",
+  "type": "Display",
+  "imageUrl": "https://maccare.vn/wp-content/uploads/2020/11/bo-ve-sinh-jcpal-mix-screen-cleaner-maccare.jpg",
+  "buyPrice": 120000,
+  "promotionPrice": 100000,
+  "description": "Bộ vệ sinh JCPAL MiX Screen Cleaner giúp làm sạch màn hình an toàn, hiệu quả sử dụng cho tất cả các loại màn hình máy tính, điện thoại bởi dung dịch không chứa cồn.",
+  "timeCreated": {
+    "$date": "2022-03-03T13:01:47.523Z"
+  },
+  "timeUpdated": {
+    "$date": "2022-03-03T13:01:47.524Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6220bc9447c025bf61dedc8e"
+  },
+  "name": "Bàn phím không dây Logitech MX Keys Mini",
+  "type": "Keyboard",
+  "imageUrl": "https://lh3.googleusercontent.com/FVCoNk2zAigYnIyKzb2H1o-R3GydhIGBOgOCmy_S3ZhpRtGIBwUqplkfkSMbeyBh3H6yuWZwVxEdqEiDIiEHtYNQuAIApyIn=w1000-rw",
+  "buyPrice": 2700000,
+  "promotionPrice": 2500000,
+  "description": "Bàn phím không dây Logitech MX Keys Mini (Hồng) sở hữu thiết kế hiện đại gọn gàng, với các phím bấm thông minh hơn, hỗ trợ người dùng thao tác chuẩn xác, nhanh nhẹn. Đây sẽ là người bạn tuyệt vời mang đến trải nghiệm gõ phím tuyệt vời cho những ai yêu thích sáng tạo. Kích thước mini nhỏ gọn, các phím chức năng tiện ích. MX Keys Mini (Hồng) tối giản với kích thước mini, đặt mọi phím và lệnh trong tầm tay người dùng. Bạn sẽ có tư thế ngồi tốt hơn, cải thiện công thái học với vai được căn chỉnh và cho phép đặt chuột gần bàn phím hơn để bạn không cần phải chạm tay nhiều.",
+  "timeCreated": {
+    "$date": "2022-03-03T13:03:16.054Z"
+  },
+  "timeUpdated": {
+    "$date": "2022-03-03T13:03:16.054Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6220bce547c025bf61dedc90"
+  },
+  "name": "Màn hình LCD SAMSUNG LS27R350FHEXXV (1920 x 1080/IPS/75Hz/5 ms/FreeSync)",
+  "type": "Display",
+  "imageUrl": "https://lh3.googleusercontent.com/dNnpUSJm-depK-2KYGWJKquHMXtLzgcYERiHpebVMjljt3jvkigS8vNc60R6Khs6oX-ONWGDIEWGnUybaA=w1000-rw",
+  "buyPrice": 5339000,
+  "promotionPrice": 5239000,
+  "description": "Màn hình LCD Samsung 27 inches được thiết kế cạnh viền siêu mỏng và sang trọng, kèm theo đó là đế chắc chắn giúp bạn có thể lắp đặt trong bàn làm việc một cách dễ dàng. Với màn hình IPS LED, bạn sẽ được tận hưởng một trải nghiệm tuyệt đẹp, cùng những chi tiết sắc nét trên màn hình gần như không có viền.",
+  "timeCreated": {
+    "$date": "2022-03-03T13:04:37.250Z"
+  },
+  "timeUpdated": {
+    "$date": "2022-03-03T13:04:37.250Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6220bd3147c025bf61dedc92"
+  },
+  "name": "Màn hình LCD ASUS VY249HE (1920 x 1080/IPS/75Hz/1 ms/FreeSync)",
+  "type": "Display",
+  "imageUrl": "https://lh3.googleusercontent.com/9XVDSArZemhDHJdTjB_ZtCOdfJiHjX8454Ajjp0KkIVXc7etr1C09dYQ6McusO3XhTh0ccqdLhURPlQyNexPM5hqWqcNZORl=w1000-rw",
+  "buyPrice": 4590000,
+  "promotionPrice": 4190000,
+  "description": "LCD ASUS VY249HE là màn hình phẳng có kích thước 23.8 inch có độ phân giải Full HD 1920 x 1080 pixels, góc nhìn mở rộng 178 (H) / 178 (V) mang đến chất lượng hình ảnh sắc nét, chân thật cùng với độ sáng 250 cd/m2 cho phép hình ảnh hiển thị rõ ở những nơi có điều kiện ánh sáng bình thường. Có khả năng hiển thị màu sắc lên đến 16.7 triệu màu, tấm nền IPS LED cùng độ tương phản tĩnh 1,000:1 cho khả năng tái tạo màu sắc tốt, chi tiết cao giúp người dùng tận hưởng hình ảnh với màu sắc rực rỡ, chân thật.",
+  "timeCreated": {
+    "$date": "2022-03-03T13:05:53.586Z"
+  },
+  "timeUpdated": {
+    "$date": "2022-03-03T13:05:53.586Z"
+  },
+  "__v": 0
+}]
