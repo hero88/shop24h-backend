@@ -13,6 +13,10 @@ const customerSchema = new Schema({
     address: String,
     city: String,
     country: String,
+    uid: {
+        type: String,
+        default: ""
+    },
     orders: [
         {
             type: Schema.Types.ObjectId,

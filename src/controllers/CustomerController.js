@@ -10,7 +10,8 @@ function createCustomer (request, response) {
         email: request.body.email,
         address: request.body.address,
         city: request.body.city,
-        country: request.body.country
+        country: request.body.country,
+        uid: request.body.uid
     });
 
     customer.save()
