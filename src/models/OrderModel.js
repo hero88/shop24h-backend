@@ -11,6 +11,7 @@ const orderSchema = new Schema({
     requiredDate: Date,
     shippedDate: Date,
     note: String,
+    totalAmount: Number,
     status: {
         type: Number,
         default: 0

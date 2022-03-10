@@ -15,19 +15,19 @@ function createOrderDetail(req, res) {
         quantity: req.body.quantity,
         priceEach: req.body.priceEach
     });
-
+    let detail= {};
     // Gọi hàm orderdetail save - là 1 promise (Tiến trình bất đồng bộ)
     orderdetail.save()
         // Sau khi tạo orderdetail thành công                
         .then(function(newOrderDetail) {            
             var orderId = req.params.orderId;
-            var productId = req.params.productId;
-
+            var productId = req.params.productId;   
             // Gọi hàm OrderDetailModel .findOneAndUpdate
             return OrderDetailModel.findOneAndUpdate({ _id: newOrderDetail._id }, {order: orderId, product: productId}, { new: true });
         })
         .then((newOrderDetail)=> { // kiểm tra orderId chính xác
             var orderId = req.params.orderId;
+            detail= newOrderDetail;
             return OrderModel.findOneAndUpdate({_id: orderId}, {$push: {details: newOrderDetail._id}}, {new: true});
         })
         // Sau khi update customer thành công trả ra status 200 - Success
@@ -35,7 +35,8 @@ function createOrderDetail(req, res) {
             return res.status(200).json({
                 success: true,
                 message: 'New OrderDetail created successfully.',
-                orderdetail: data,
+                orderdetail: detail,
+                res: data
             });
         })
         // Xử lý lỗi trả ra 500 - Server Internal Error

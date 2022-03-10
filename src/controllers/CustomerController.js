@@ -31,7 +31,7 @@ function createCustomer (request, response) {
 
 function getAllCustomer (request, response) {
     CustomerModel.find()
-        .select("_id fullName phoneNumber email address city country timeCreated timeUpdated")
+        .select("_id fullName phoneNumber email address city country timeCreated timeUpdated uid")
         .then((customerList) => {
             return response.status(200).json({
                 message: "Success",

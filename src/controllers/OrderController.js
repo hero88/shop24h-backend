@@ -5,6 +5,7 @@ const mongoose = require('mongoose');
 const { OrderModel } = require('../models/OrderModel');
 // Import Customer Model
 const { CustomerModel } = require('../models/CustomerModel');
+const { OrderDetailModel } = require('../models/OrderDetailModel');
 
 // Create Order
 function createOrder(req, res) {
@@ -15,9 +16,10 @@ function createOrder(req, res) {
         orderDate: req.body.orderDate,
         requiredDate: req.body.requiredDate,
         shippedDate: req.body.shippedDate,
-        note: req.body.note
+        note: req.body.note,
+        totalAmount: req.body.totalAmount
     });
-
+    let copy = {};
     // Gọi hàm order save - là 1 promise (Tiến trình bất đồng bộ)
     order.save()
         // Sau khi tạo order thành công
@@ -30,6 +32,7 @@ function createOrder(req, res) {
         })
         .then((newOrder)=>{
             var customerId = req.params.customerId;
+            copy = newOrder;
             return CustomerModel.findOneAndUpdate({_id: customerId}, {$push: {orders: newOrder._id}}, {new: true});
         })
         // Sau khi update customer thành công trả ra status 200 - Success
@@ -37,7 +40,8 @@ function createOrder(req, res) {
             return res.status(200).json({
                 success: true,
                 message: 'New Order created successfully.',
-                order: data,
+                order: copy,
+                res: data
             });
         })
         // Xử lý lỗi trả ra 500 - Server Internal Error
@@ -80,7 +84,7 @@ function getAllOrderOfCustomer(req, res) {
 // Get all order
 function getAllOrder(req, res) {
     OrderModel.find()
-        .select('_id orderDate shippedDate requiredDate note status customer timeCreated timeUpdated')
+        .select('_id orderDate shippedDate requiredDate note status customer timeCreated timeUpdated totalAmount')
         .then((allOrder) => {
             return res.status(200).json({
                 success: true,
@@ -145,6 +149,7 @@ function deleteOrder(req, res) {
 
     OrderModel.findByIdAndRemove(id)
         .then(() => CustomerModel.updateMany({}, {$pull: {orders: id}}))
+        .then(() => OrderDetailModel.remove({order: id}))
         .then(() => res.status(200).json({
             success: true,
         }))
