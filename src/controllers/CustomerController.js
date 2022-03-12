@@ -11,7 +11,8 @@ function createCustomer (request, response) {
         address: request.body.address,
         city: request.body.city,
         country: request.body.country,
-        uid: request.body.uid
+        uid: request.body.uid,
+        role: request.body.role
     });
 
     customer.save()
@@ -31,7 +32,7 @@ function createCustomer (request, response) {
 
 function getAllCustomer (request, response) {
     CustomerModel.find()
-        .select("_id fullName phoneNumber email address city country timeCreated timeUpdated uid")
+        .select("_id fullName phoneNumber email address city country timeCreated timeUpdated uid role")
         .then((customerList) => {
             return response.status(200).json({
                 message: "Success",

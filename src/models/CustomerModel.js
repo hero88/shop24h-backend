@@ -13,6 +13,11 @@ const customerSchema = new Schema({
     address: String,
     city: String,
     country: String,
+    role: {
+        type: String,
+        default: "Customer",
+        enum: ["Customer", "Admin"]
+    },
     uid: {
         type: String,
         default: ""
