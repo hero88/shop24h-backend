@@ -107,6 +107,7 @@ function getSingleOrder(req, res) {
 
     OrderModel.findById(id)
         .populate({path: 'customer', select: "_id fullName phoneNumber email address city country"})
+        .populate({path: 'details', select: "_id product quantity"})
         .then((singleOrder) => {
             res.status(200).json({
                 success: true,
