@@ -84,7 +84,7 @@ function getAllOrderOfCustomer(req, res) {
 // Get all order
 function getAllOrder(req, res) {
     OrderModel.find()
-        .select('_id orderDate shippedDate requiredDate note status customer timeCreated timeUpdated totalAmount')
+        .select('_id orderDate shippedDate requiredDate note status customer timeCreated timeUpdated totalAmount details')
         .then((allOrder) => {
             return res.status(200).json({
                 success: true,

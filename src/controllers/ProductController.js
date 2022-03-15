@@ -43,8 +43,8 @@ function getAllProduct (request, response) {
 
     let query = ProductModel.find();
     if (name) query = query.find({name: name});
-    if (minPrice) query = query.find({buyPrice: {$gte: minPrice}});
-    if (maxPrice) query = query.find({buyPrice: {$lte: maxPrice}});
+    if (minPrice) query = query.find({promotionPrice: {$gte: minPrice}});
+    if (maxPrice) query = query.find({promotionPrice: {$lte: maxPrice}});
     if (type) query = query.find({type: type});
 
     query.skip(startIndex)
